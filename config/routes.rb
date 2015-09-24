@@ -14,4 +14,7 @@ Rails.application.routes.draw do
 
   #handles users logging out
   delete '/sessions', to: 'sessions#destroy'
+
+  #serves up a list of libraries
+  get '/libraries', to: 'libraries#index'
 end
