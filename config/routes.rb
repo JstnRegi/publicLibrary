@@ -11,4 +11,7 @@ Rails.application.routes.draw do
   #handles users signing in
   get '/sign_in', to: 'sessions#new'
   post '/sessions', to: 'sessions#create'
+
+  #handles users logging out
+  delete '/sessions', to: 'sessions#destroy'
 end
