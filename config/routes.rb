@@ -9,4 +9,7 @@ Rails.application.routes.draw do
 
   get '/users/:id', to: 'users#show'
 
+  get '/sign_in', to: 'sessions#new'
+
+  
 end
