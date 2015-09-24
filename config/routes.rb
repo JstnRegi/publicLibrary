@@ -17,4 +17,8 @@ Rails.application.routes.draw do
 
   #serves up a list of libraries
   get '/libraries', to: 'libraries#index'
+
+  #create new library
+  get '/libraries/new', to: 'libraries#new', as: 'new_library'
+  post '/libraries', to: 'libraries#create'
 end
