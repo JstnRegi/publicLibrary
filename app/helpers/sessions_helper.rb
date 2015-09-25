@@ -10,9 +10,11 @@ module SessionsHelper
 	end
 
 	def logged_in?
-		if current_user == nil
-			redirect_to '/sign_in'
+		if @current_user == nil
+			redirect_to sign_in_path
+			# binding.pry
 		end
+		
 	end
 
 	def logout(user)

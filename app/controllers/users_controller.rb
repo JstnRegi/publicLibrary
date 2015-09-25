@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+	before_action :logged_in?, only: :show
 
 	def index
 		@users = User.all
@@ -16,6 +17,10 @@ class UsersController < ApplicationController
 	end
 
 	def show
+		# unless logged_in?
+		# 	flash[:error] = "You must be logged in to access this section"
+		# 	redirect_to sign_in_path
+		# end
 		@user = User.find(params[:id])
 	end
 

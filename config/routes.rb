@@ -24,4 +24,5 @@ Rails.application.routes.draw do
 
   #serves up a list of users to a library
   get '/users/:user_id/libraries', to: 'library_users#index', as: 'user_libraries'
+  post "/libraries/:library_id/users", to: "library_users#create", as: "library_users"
 end
